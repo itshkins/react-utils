@@ -3,9 +3,11 @@
   "type": "module",
   "version": "1.0.1",
   "description": "React hooks",
-  "main": "index.js",
+  "main": "./dist/react-utils.cjs",
+  "browser": "./dist/react-utils.js",
+  "types": "./dist/react-utils.d.js",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "scripts": {
     "clean": "rm -rf ./dist",
