@@ -13,8 +13,8 @@ const DisabledSandbox = () => {
 
   return (
     <div>
-      <button onClick={disabled.activate} />
-      <button onClick={disabled.deactivate} />
+      <button onClick={disabled.activate} disabled={disabled.value} />
+      <button onClick={disabled.deactivate} disabled={!disabled.value} />
       <button onClick={disabled.toggle} />
     </div>
   )
