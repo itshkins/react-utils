@@ -13,8 +13,10 @@ const LocalStateSandbox = () => {
 
   return (
     <div>
-      <button onClick={() => setDisabled({first: true, second: false})} disabled={disabled.first} />
-      <button onClick={() => setDisabled({first: false, second: true})} disabled={disabled.second} />
+      <button onClick={() => setDisabled({first: false, second: false})}>Enable both</button>
+      <button onClick={() => setDisabled({first: true, second: false})} disabled={disabled.first}>Disable first</button>
+      <button onClick={() => setDisabled({first: false, second: true})} disabled={disabled.second}>Disable second</button>
+      <button onClick={() => setDisabled({first: true, second: true})}>Disable both</button>
     </div>
   )
 }

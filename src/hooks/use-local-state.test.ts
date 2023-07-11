@@ -6,9 +6,11 @@ import {useLocalState} from './use-local-state'
 describe(`useLocalState hook`, () => {
   it(`Should be correct indicator of Storage API`, () => {
     const defaultStorage = sessionStorage
-    const key = `key`
+    const key = `my-key`
     const defaultState = {value: [] as string[]}
     expect(defaultStorage.getItem(key)).toBeNull()
+
+    const getStorageItem = () => JSON.parse(defaultStorage.getItem(key) ?? `null`)
 
     const {result, rerender, unmount} = renderHook(() => useLocalState(key, defaultState, defaultStorage))
     const [firstState, setState] = result.current
@@ -22,8 +24,8 @@ describe(`useLocalState hook`, () => {
     const [secondState] = result.current
     expect(secondState).toBe(newState)
     expect(result.all).toHaveLength(3)
-    expect(JSON.parse(defaultStorage.getItem(key) ?? `null`)).not.toBe(newState)
-    expect(JSON.parse(defaultStorage.getItem(key) ?? `null`)).toEqual(newState)
+    expect(getStorageItem()).not.toBe(newState)
+    expect(getStorageItem()).toEqual(newState)
 
     unmount()
     expect(result.all).toHaveLength(3)

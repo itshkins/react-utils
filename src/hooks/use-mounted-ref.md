@@ -1,7 +1,7 @@
 # useMountedRef hook
 
 A React hook that returns a ref object returns true when component is mounted and false otherwise.
-It is __useful__ in case you are __unable to cancel async operation__, e.g. your __api client doesn't support cancellation__.
+It might be __useful__ in case you are __unable to cancel async operation__, e.g. your __api client doesn't support cancellation__.
 
 ## Usage
 
