@@ -1,7 +1,7 @@
 {
   "name": "@itshkins/react-utils",
   "type": "module",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React hooks",
   "main": "./dist/react-utils.cjs",
   "browser": "./dist/react-utils.js",
