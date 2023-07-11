@@ -1,8 +1,7 @@
 # useBooleanState hook
 
 A React hook that returns an object with boolean state and methods to change it.
-It's common to have a boolean state in your component, e.g. isActive, isDisabled, etc.
-It is __useful__ in case you are __unable to cancel async operation__, e.g. your __api client doesn't support cancellation__.
+It's a common case to have a boolean state in your component, e.g. isActive, isDisabled, etc.
 
 ## Usage
 
