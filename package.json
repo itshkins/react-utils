@@ -1,0 +1,43 @@
+{
+  "name": "@itshkins/react-utils",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "React composables and directives",
+  "main": "index.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "start": "npm run clean && NODE_ENV=development rollup -c -w",
+    "build": "npm run clean && NODE_ENV=production rollup -c",
+    "test": "npm run test:unit",
+    "test:unit": "vitest src --root src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itshkins/react-utils.git"
+  },
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "author": "itshkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itshkins/react-utils/issues"
+  },
+  "homepage": "https://github.com/itshkins/react-utils#readme",
+  "dependencies": {
+    "react": "~17 || ~18",
+    "react-dom": "~17 || ~18"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "8.0.1",
+    "jsdom": "22.1.0",
+    "rollup": "3.26.2",
+    "rollup-plugin-dts": "5.3.0",
+    "rollup-plugin-esbuild": "5.0.0",
+    "vitest": "0.33.0"
+  }
+}
